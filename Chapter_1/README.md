@@ -1,1 +1,0 @@
-# impractical_python_apps
