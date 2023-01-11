@@ -5,12 +5,13 @@ import sys
 import random
 
 
-def main():
+def getfunny_names():
+    """Access the funny names generator function."""
     """Choose names at random from 2 tuples of names and print to screen."""
     print("Welcome to the Psych 'SideKick Name Picker.'\n")
     print("A name just like Sean would pick for Gus:.\n\n")
 
-    first = (
+    first_names = (
         "Baby Oil",
         "Bad News",
         "Big Burps",
@@ -82,7 +83,7 @@ def main():
         "Worms",
     )
 
-    last = (
+    last_names = (
         "Appleyard",
         "Bigmeat",
         "Bloominshine",
@@ -149,24 +150,64 @@ def main():
         "Winterkorn",
         "Woolysocks",
     )
-    
+
+    middle_names = (
+        "Alexander",
+        "Andrew",
+        "Anthony",
+        "Benjamin",
+        "Charles",
+        "Christopher",
+        "Daniel",
+        "David",
+        "Edward",
+        "Ethan",
+        "Henry",
+        "Jack",
+        "Jacob",
+        "James",
+        "The Big News",
+        "John",
+        "Joseph",
+        "Lee",
+        "Grunts",
+        "Matthew",
+        "Micheal",
+        "Noah",
+        "Tinkie Winkie",
+        "Paul",
+        "Richard",
+        "Theodore",
+        "Thomas",
+        "William",
+    )
 
     activate = True
 
     while activate:
-        first_name = random.choice(first)
-        last_name = random.choice(last)
+
+        first_name = random.choice(first_names)
+        last_name = random.choice(last_names)
+        middle_name = random.choice(middle_names)
 
         print("\n\n")
 
-        print((f"{first_name}, {last_name}"), file=sys.stderr)
+        print(
+            (f"{first_name.title()} - {middle_name.title()} - {last_name.title()}"),
+            file=sys.stderr,
+        )
         print("\n\n")
 
         try_again = input("\n\nTry again? (Press Enter or else n to quit)\n ")
+
         if try_again.lower() == "n":
             break
 
         input("\nPress Enter to exit.")
+
+
+def main():
+    getfunny_names()
 
 
 if __name__ == "__main__":

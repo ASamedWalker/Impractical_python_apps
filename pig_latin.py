@@ -1,5 +1,8 @@
+#!/usr/bin/env python
+
 """This program adds 'ay' if the word starts with a consonant and 'way' if it's a vowels."""
 import sys
+
 
 def main():
     """Accept users input to add additional words."""
@@ -11,7 +14,7 @@ def main():
 
         characters = list(word)
         vowels = "aeiouy"
-        article = "way" if word[0].lower() in vowels else 'ay'
+        article = "way" if word[0].lower() in vowels else "ay"
         if word[0].lower() in vowels:
             article = "".join(characters) + article
         else:
