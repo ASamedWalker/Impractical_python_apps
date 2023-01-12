@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """Load a text file as a list.
 
 Arguments:
