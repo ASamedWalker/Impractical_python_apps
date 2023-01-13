@@ -4,7 +4,7 @@ import load_dictionary
 import time
 
 word_list = load_dictionary.load("2of4brif.txt")
-start_time = time.time()
+
 
 # find word-pair palingrams
 def find_palingrams():
@@ -22,7 +22,9 @@ def find_palingrams():
     return pali_list
 
 
+start_time = time.time()
 palingrams = find_palingrams()
+end_time = time.time()
 # sorting palingrams on first word
 palingrams_sorted = sorted(palingrams)
 
@@ -30,5 +32,5 @@ print(f"Number of palingrams = {len(palingrams_sorted)}")
 for first, second in palingrams_sorted:
     print(f"{first, second}")
 
-end_time = time.time()
+
 print(f"Runtime for this program was {end_time - start_time} seconds.")
